@@ -1,0 +1,9 @@
+financial_coordinator
+│
+├── financial_coordinator.py
+├── prompt.py
+└── sub_agents/
+    ├── market_analyst.py
+    ├── screener_and_risk.py
+    ├── trader.py
+    └── auditor.py
