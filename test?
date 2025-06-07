@@ -1,0 +1,47 @@
+#analyst
+from google.adk.agents import LlmAgent
+from .. import prompt
+
+market_analyst_agent = LlmAgent(
+    name="market_analyst_agent",
+    model="gemini-2.5-pro-preview-05-06",
+    description="Analyzes market trends, news, earnings reports, and sentiment.",
+    instruction=prompt.MARKET_ANALYST_PROMPT,
+    output_key="market_analysis_output",
+)
+
+#screener
+from google.adk.agents import LlmAgent
+from .. import prompt
+
+screener_and_risk_agent = LlmAgent(
+    name="screener_and_risk_agent",
+    model="gemini-2.5-pro-preview-05-06",
+    description="Screens stocks and evaluates risk factors.",
+    instruction=prompt.SCREENER_AND_RISK_PROMPT,
+    output_key="screening_risk_output",
+)
+
+#trader
+from google.adk.agents import LlmAgent
+from .. import prompt
+
+trader_agent = LlmAgent(
+    name="trader_agent",
+    model="gemini-2.5-pro-preview-05-06",
+    description="Executes trade strategy with entry/exit and stop-loss.",
+    instruction=prompt.TRADER_PROMPT,
+    output_key="trader_output",
+)
+
+#auditor
+from google.adk.agents import LlmAgent
+from .. import prompt
+
+auditor_agent = LlmAgent(
+    name="auditor_agent",
+    model="gemini-2.5-pro-preview-05-06",
+    description="Audits portfolio and suggests optimizations.",
+    instruction=prompt.AUDITOR_PROMPT,
+    output_key="audit_output",
+)
